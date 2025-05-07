@@ -1,0 +1,45 @@
+.hero {
+  background-color: $bg-color;
+  color: $text-color;
+  min-height: 92vh;
+  padding-top: 20rem;
+
+  &__content {
+    text-align: center;
+    max-width: 156rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: 11.3rem;
+    line-height: 13.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+
+    & .hero__highlight {
+      color: $accent-color;
+    }
+  }
+
+  &__subtitle {
+    font-family: $font-primary;
+    font-size: 3rem;
+    line-height: 3.3rem;
+    max-width: 50rem;
+    margin: 0 auto 4rem;
+  }
+
+  &__cta {
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    padding: 1.2rem 3rem;
+    background-color: $accent-color;
+    color: $bg-color;
+    border: none;
+    border-radius: 0.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+}
