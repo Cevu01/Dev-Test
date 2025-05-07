@@ -1,13 +1,8 @@
 .hero {
-  background-color: $bg-color;
-  color: $text-color;
-  min-height: 92vh;
-  padding-top: 20rem;
-
-  &__content {
-    text-align: center;
-    max-width: 156rem;
+  &__container {
+    max-width: 150rem;
     margin: 0 auto;
+    position: relative;
   }
 
   &__title {
@@ -15,31 +10,26 @@
     font-size: 11.3rem;
     line-height: 13.2rem;
     font-weight: 300;
-    margin-bottom: 2rem;
 
     & .hero__highlight {
       color: $accent-color;
     }
   }
 
-  &__subtitle {
-    font-family: $font-primary;
-    font-size: 3rem;
-    line-height: 3.3rem;
-    max-width: 50rem;
-    margin: 0 auto 4rem;
-  }
+  &__group {
+    position: absolute;
+    top: 30rem;
+    max-width: 72rem;
+    right: -5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.9rem;
 
-  &__cta {
-    font-family: $font-primary;
-    font-size: 1.8rem;
-    padding: 1.2rem 3rem;
-    background-color: $accent-color;
-    color: $bg-color;
-    border: none;
-    border-radius: 0.8rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: opacity 0.2s ease;
+    .hero__subtitle {
+      text-align: left;
+      font-size: 3rem;
+      line-height: 3.3rem;
+      letter-spacing: -0.04em;
+    }
   }
 }

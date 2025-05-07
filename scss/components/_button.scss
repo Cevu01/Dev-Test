@@ -1,0 +1,33 @@
+.btn {
+  &--primary {
+    &.hero__cta {
+      display: inline-block;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      line-height: 0;
+
+      svg {
+        display: block;
+        width: 217px;
+        height: 65px;
+        transition: transform 0.3s ease;
+      }
+
+      svg path:first-child {
+        fill: $accent-color !important;
+        transition: fill 0.3s ease;
+      }
+
+      &:hover {
+        svg {
+          transform: scale(1.05);
+        }
+        svg path:first-child {
+          fill: lighten($accent-color, 10%) !important;
+        }
+      }
+    }
+  }
+}
