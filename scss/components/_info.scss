@@ -1,0 +1,42 @@
+.info {
+  background-color: $bg-color;
+  padding: 20rem 0;
+
+  &__title {
+    font-size: 9.4rem;
+    margin-bottom: 3rem;
+    color: $text-color;
+    line-height: 11rem;
+    font-weight: 300;
+  }
+  & .info__highlight {
+    color: $accent-color;
+  }
+
+  &__container {
+    max-width: 136rem;
+    margin: 0 auto;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 13rem;
+  }
+
+  &__text {
+    font-size: 3rem;
+    max-width: 90rem;
+    color: $text-color;
+    line-height: 3.3rem;
+    letter-spacing: -0.04em;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__diagram {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
