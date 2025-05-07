@@ -39,38 +39,76 @@
       </div>
     </header>
 
-    <section class="hero">
-      <div class="hero__container">
-        <h1 class="hero__title">
-          LOREM IPSUM DOLOR SIT AMET
-          <span class="hero__highlight">CONSECTETUR.</span>
-        </h1>
-        <div class="hero__group">
-          <p class="hero__subtitle">
-            Lorem ipsum dolor sit amet consectetur. Vestibulum enim aenean purus
-            nam quis.
-          </p>
-          <button class="btn btn--primary hero__cta">
-            <svg
-              width="217"
-              height="65"
-              viewBox="0 0 217 65"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M193.786 2.19674e-06H23.1967C21.3269 -0.00120108 19.4897 0.491939 17.87 1.4298C16.2504 2.36766 14.9054 3.71715 13.9705 5.34247L1.42626 27.1575C0.491899 28.7818 0 30.6244 0 32.5C0 34.3756 0.491899 36.2182 1.42626 37.8425L13.9705 59.6575C14.9054 61.2828 16.2504 62.6323 17.87 63.5702C19.4897 64.508 21.3269 65.0012 23.1967 65H193.786C195.654 64.9996 197.489 64.5058 199.107 63.568C200.725 62.6302 202.069 61.2815 203.003 59.6575L215.574 37.8425C216.508 36.2182 217 34.3756 217 32.5C217 30.6244 216.508 28.7818 215.574 27.1575L203.003 5.34247C202.069 3.71845 200.725 2.3698 199.107 1.43202C197.489 0.494244 195.654 0.000362397 193.786 2.19674e-06Z"
-                fill="#D5FF2F"
-              />
-              <path
-                d="M93.474 33.364C93.474 34.786 92.322 35.92 90.9 35.92V37C92.916 37 94.554 35.38 94.554 33.364V23.5H93.474V33.364ZM97.2492 30.25C97.2492 33.976 100.273 37 103.999 37C107.725 37 110.749 33.976 110.749 30.25C110.749 26.524 107.725 23.5 103.999 23.5C100.273 23.5 97.2492 26.524 97.2492 30.25ZM98.3292 30.25C98.3292 27.118 100.867 24.58 103.999 24.58C107.131 24.58 109.669 27.118 109.669 30.25C109.669 33.382 107.131 35.92 103.999 35.92C100.867 35.92 98.3292 33.382 98.3292 30.25ZM113.425 37H114.505V23.5H113.425V37ZM117.207 37H118.287V24.58H118.503L128.241 37H129.321V23.5H128.241V35.272L119.007 23.5H117.207V37Z"
-                fill="#361281"
-              />
-            </svg>
-          </button>
+    <aside class="sidebar">
+      <a href="https://github.com/your-repo" class="sidebar__link">
+        <svg class="icon icon--github">
+          <use xlink:href="assets/icons.svg#icon-github"></use>
+        </svg>
+      </a>
+      <a href="https://discord.gg/…" class="sidebar__link">
+        <svg class="icon icon--discord">
+          <use xlink:href="assets/icons.svg#icon-discord"></use>
+        </svg>
+      </a>
+      <a href="mailto:hello@example.com" class="sidebar__link">
+        <svg class="icon icon--mail">
+          <use xlink:href="assets/icons.svg#icon-mail"></use>
+        </svg>
+      </a>
+      <a href="#" class="sidebar__link">
+        <svg class="icon icon--social4">
+          <use xlink:href="assets/icons.svg#icon-social4"></use>
+        </svg>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <svg class="icon icon--custom1">
+          <use xlink:href="assets/icons.svg#icon-custom1"></use>
+        </svg>
+      </a>
+
+      <!-- Play -->
+      <a href="#" class="sidebar__link">
+        <svg class="icon icon--play" width="24" height="25">
+          <use xlink:href="assets/icons.svg#icon-play"></use>
+        </svg>
+      </a>
+    </aside>
+
+    <main>
+      <section class="hero">
+        <div class="hero__container">
+          <h1 class="hero__title">
+            LOREM IPSUM DOLOR SIT AMET
+            <span class="hero__highlight">CONSECTETUR.</span>
+          </h1>
+          <div class="hero__group">
+            <p class="hero__subtitle">
+              Lorem ipsum dolor sit amet consectetur. Vestibulum enim aenean
+              purus nam quis.
+            </p>
+            <button class="btn btn--primary hero__cta">
+              <svg
+                width="217"
+                height="65"
+                viewBox="0 0 217 65"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M193.786 2.19674e-06H23.1967C21.3269 -0.00120108 19.4897 0.491939 17.87 1.4298C16.2504 2.36766 14.9054 3.71715 13.9705 5.34247L1.42626 27.1575C0.491899 28.7818 0 30.6244 0 32.5C0 34.3756 0.491899 36.2182 1.42626 37.8425L13.9705 59.6575C14.9054 61.2828 16.2504 62.6323 17.87 63.5702C19.4897 64.508 21.3269 65.0012 23.1967 65H193.786C195.654 64.9996 197.489 64.5058 199.107 63.568C200.725 62.6302 202.069 61.2815 203.003 59.6575L215.574 37.8425C216.508 36.2182 217 34.3756 217 32.5C217 30.6244 216.508 28.7818 215.574 27.1575L203.003 5.34247C202.069 3.71845 200.725 2.3698 199.107 1.43202C197.489 0.494244 195.654 0.000362397 193.786 2.19674e-06Z"
+                  fill="#D5FF2F"
+                />
+                <path
+                  d="M93.474 33.364C93.474 34.786 92.322 35.92 90.9 35.92V37C92.916 37 94.554 35.38 94.554 33.364V23.5H93.474V33.364ZM97.2492 30.25C97.2492 33.976 100.273 37 103.999 37C107.725 37 110.749 33.976 110.749 30.25C110.749 26.524 107.725 23.5 103.999 23.5C100.273 23.5 97.2492 26.524 97.2492 30.25ZM98.3292 30.25C98.3292 27.118 100.867 24.58 103.999 24.58C107.131 24.58 109.669 27.118 109.669 30.25C109.669 33.382 107.131 35.92 103.999 35.92C100.867 35.92 98.3292 33.382 98.3292 30.25ZM113.425 37H114.505V23.5H113.425V37ZM117.207 37H118.287V24.58H118.503L128.241 37H129.321V23.5H128.241V35.272L119.007 23.5H117.207V37Z"
+                  fill="#361281"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <script src="js/main.js"></script>
   </body>
