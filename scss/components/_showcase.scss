@@ -1,0 +1,14 @@
+.showcase {
+  &__container {
+    max-width: 136rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2);
+  }
+}
