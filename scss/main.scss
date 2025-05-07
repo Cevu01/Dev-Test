@@ -1,28 +1,16 @@
-@import "fonts";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
 
-body {
-  font-family: sans-serif;
-  background: #0e0e0e;
-  color: white;
-}
-.h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 20px;
-  font-family: Aspergit, sans-serif;
-}
+@import "components/button";
 
-.p {
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 20px;
-  font-family: Futura, sans-serif;
-}
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/home";
