@@ -54,9 +54,7 @@
   }
 
   &__text {
-    font-size: 3rem;
-    line-height: 3.3rem;
-    letter-spacing: -0.04em;
+    @include textStyles(-0.04em);
     max-width: 78rem;
   }
 }

@@ -1,0 +1,8 @@
+@mixin textStyles($letterSpacing) {
+  font-size: 3rem;
+  line-height: 3.3rem;
+  letter-spacing: $letterSpacing;
+  font-weight: 300;
+  color: $text-color;
+  font-family: $font-text;
+}

@@ -22,14 +22,11 @@
   }
 
   &__text {
-    font-size: 3rem;
     max-width: 90rem;
-    color: $text-color;
-    line-height: 3.3rem;
-    letter-spacing: -0.04em;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    @include textStyles(-0.04em);
   }
 
   &__diagram {
