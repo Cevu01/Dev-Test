@@ -9,7 +9,6 @@
 
 @mixin titleStyles {
   font-size: 9.4rem;
-  margin-bottom: 3rem;
   line-height: 11rem;
   letter-spacing: -0.03em;
   font-weight: 700;
@@ -34,4 +33,10 @@
   grid-template-columns: repeat(3, 1fr);
   row-gap: $row-gap;
   column-gap: $column-gap;
+}
+
+@mixin section($padding-bottom: 20rem) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 0 0 $padding-bottom 0;
 }

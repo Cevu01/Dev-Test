@@ -1,35 +1,26 @@
 .hero {
-  background-color: $bg-color;
-  color: $text-color;
+  @include section(0);
   min-height: 92vh;
   padding-top: 18rem;
 }
 
 .showcase {
-  background-color: $bg-color;
-  padding: 0 0 20rem 0;
+  @include section;
 }
 
 .info {
-  background-color: $bg-color;
-  padding: 0 0 20rem 0;
+  @include section;
 }
 
 .why-us {
-  background-color: $bg-color;
-  color: $text-color;
+  @include section(40rem);
   position: relative;
-  padding: 0 0 40rem 0;
 }
 
 .founder {
-  background-color: $bg-color;
-  color: $text-color;
-  padding: 0 0 38rem 0;
+  @include section(38rem);
 }
 
 .contributors {
-  background-color: $bg-color;
-  color: $text-color;
-  padding: 0 0 30rem 0;
+  @include section(30rem);
 }

@@ -8,6 +8,7 @@
 
   &__container {
     @include container(136rem);
+    @include flex(3rem);
   }
   &__content {
     @include flex(13rem);
