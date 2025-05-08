@@ -1,0 +1,62 @@
+.founder {
+  &__container {
+    max-width: 136rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4.1rem;
+  }
+
+  &__image-wrapper {
+    flex: 0 0 auto;
+  }
+
+  &__image {
+    display: block;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  &__name {
+    font-family: $font-heading;
+    font-size: 5.4rem;
+    line-height: 7.7rem;
+    font-weight: 700;
+    color: $accent-color;
+  }
+
+  &__role {
+    font-family: $font-heading;
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+  }
+  &__quote {
+    position: relative;
+    padding-left: 7rem;
+
+    &::before {
+      content: url("/assets/quote.svg");
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5.3rem;
+      height: 3.8rem;
+    }
+  }
+
+  &__text {
+    font-size: 3rem;
+    line-height: 3.3rem;
+    letter-spacing: -0.04em;
+    max-width: 78rem;
+  }
+}
