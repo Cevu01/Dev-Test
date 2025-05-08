@@ -1,7 +1,6 @@
 .founder {
   &__container {
-    max-width: 136rem;
-    margin: 0 auto;
+    @include container(136rem);
     display: flex;
     align-items: center;
     gap: 4.1rem;

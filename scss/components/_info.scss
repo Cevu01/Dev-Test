@@ -7,8 +7,7 @@
   }
 
   &__container {
-    max-width: 136rem;
-    margin: 0 auto;
+    @include container(136rem);
   }
   &__content {
     display: flex;

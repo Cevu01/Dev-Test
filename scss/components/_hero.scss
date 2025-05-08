@@ -1,7 +1,6 @@
 .hero {
   &__container {
-    max-width: 150rem;
-    margin: 0 auto;
+    @include container(150rem);
     position: relative;
   }
 
