@@ -1,8 +1,19 @@
 @mixin textStyles($letterSpacing) {
   font-size: 3rem;
   line-height: 3.3rem;
-  letter-spacing: $letterSpacing;
   font-weight: 300;
+  letter-spacing: $letterSpacing;
   color: $text-color;
   font-family: $font-text;
+}
+
+@mixin titleStyles {
+  font-size: 9.4rem;
+  margin-bottom: 3rem;
+  line-height: 11rem;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: $text-color;
+  text-transform: uppercase;
+  font-family: $font-heading;
 }

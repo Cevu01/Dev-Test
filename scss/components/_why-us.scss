@@ -9,13 +9,7 @@
   }
 
   &__title {
-    font-size: 9.4rem;
-    font-weight: 300;
-    margin-bottom: 4rem;
-    letter-spacing: -0.03em;
-    line-height: 11rem;
-    font-weight: 700;
-    font-family: $font-heading;
+    @include titleStyles;
 
     &-accent {
       color: $accent-color;

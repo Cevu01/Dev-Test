@@ -1,11 +1,6 @@
 .info {
   &__title {
-    font-size: 9.4rem;
-    margin-bottom: 3rem;
-    color: $text-color;
-    line-height: 11rem;
-    font-weight: 700;
-    font-family: $font-heading;
+    @include titleStyles;
   }
   & .info__highlight {
     color: $accent-color;
