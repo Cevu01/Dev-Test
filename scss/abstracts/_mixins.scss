@@ -28,3 +28,10 @@
   flex-direction: column;
   gap: $gap;
 }
+
+@mixin three-column-grid($row-gap: 15rem, $column-gap: 10rem) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+}

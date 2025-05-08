@@ -1,33 +1,60 @@
 .btn {
-  &--primary {
-    &.hero__cta {
-      display: inline-block;
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 
-      svg {
-        display: block;
-        width: 217px;
-        height: 65px;
-        transition: transform 0.3s ease;
-      }
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, fill 0.3s ease;
 
-      svg path:first-child {
-        fill: $accent-color !important;
-        transition: fill 0.3s ease;
-      }
+    path:first-child {
+      transition: fill 0.3s ease;
+    }
+  }
 
-      &:hover {
-        svg {
-          transform: scale(1.05);
-        }
-        svg path:first-child {
-          fill: lighten($accent-color, 10%) !important;
-        }
-      }
+  &:hover {
+    transform: scale(1.05);
+
+    svg path:first-child {
+      fill: lighten($accent-color, 10%) !important;
+    }
+  }
+
+  &--primary.hero__cta {
+    padding: 0;
+    line-height: 0;
+    width: 217px;
+    height: 65px;
+
+    svg path:first-child {
+      fill: $accent-color !important;
+    }
+  }
+
+  &--pill {
+    position: relative;
+    width: 248px;
+    height: 50px;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: $accent-color;
+    }
+
+    .btn__text {
+      position: relative;
+      z-index: 1;
+      font-family: $font-heading;
+      font-size: 1.4rem;
+      color: $bg-color;
+      letter-spacing: 0.02em;
     }
   }
 }
