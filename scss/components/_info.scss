@@ -10,16 +10,12 @@
     @include container(136rem);
   }
   &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 13rem;
+    @include flex(13rem);
   }
 
   &__text {
     max-width: 90rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    @include flex(3rem);
     @include textStyles(-0.04em);
   }
 

@@ -22,3 +22,9 @@
   max-width: $width;
   margin: 0 auto;
 }
+
+@mixin flex($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}

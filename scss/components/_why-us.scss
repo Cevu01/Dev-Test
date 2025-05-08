@@ -1,10 +1,8 @@
 .why-us {
   &__container {
-    @include container(136rem);
     position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 7.7rem;
+    @include container(136rem);
+    @include flex(7.7rem);
   }
 
   &__title {
@@ -23,9 +21,7 @@
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    @include flex(3rem);
   }
 
   &__item-title {

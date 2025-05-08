@@ -20,9 +20,7 @@
     top: 30rem;
     max-width: 72rem;
     right: -5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2.9rem;
+    @include flex(2.9rem);
 
     .hero__subtitle {
       text-align: left;
