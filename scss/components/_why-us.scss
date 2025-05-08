@@ -1,0 +1,52 @@
+.why-us {
+  &__container {
+    max-width: 136rem;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7.7rem;
+  }
+
+  &__title {
+    font-size: 9.4rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    letter-spacing: -0.03em;
+    line-height: 11rem;
+    font-weight: 700;
+    font-family: $font-heading;
+
+    &-accent {
+      color: $accent-color;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 15rem;
+    column-gap: 10rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__item-title {
+    font-size: 4.4rem;
+    font-family: $font-heading;
+    font-weight: 700;
+    line-height: 5rem;
+    letter-spacing: 0.02em;
+  }
+
+  &__item-text {
+    font-size: 3rem;
+    line-height: 3.3rem;
+    letter-spacing: -0.04;
+    font-weight: 300;
+  }
+}

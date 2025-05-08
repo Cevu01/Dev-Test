@@ -1,13 +1,11 @@
 .info {
-  background-color: $bg-color;
-  padding: 20rem 0;
-
   &__title {
     font-size: 9.4rem;
     margin-bottom: 3rem;
     color: $text-color;
     line-height: 11rem;
-    font-weight: 300;
+    font-weight: 700;
+    font-family: $font-heading;
   }
   & .info__highlight {
     color: $accent-color;
