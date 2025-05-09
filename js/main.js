@@ -21,3 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
     startVideo();
   });
 });
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 10) {
+    header.classList.add("is-scrolled");
+  } else {
+    header.classList.remove("is-scrolled");
+  }
+});
