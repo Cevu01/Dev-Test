@@ -1,7 +1,6 @@
 .showcase {
   &__container {
-    max-width: 136rem;
-    margin: 0 auto;
+    @include container(136rem);
     position: relative;
   }
 

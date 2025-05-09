@@ -9,6 +9,7 @@
   &__container {
     @include container(136rem);
     @include flex(3rem);
+    position: relative;
   }
   &__content {
     @include flex(13rem);
@@ -24,5 +25,24 @@
     display: block;
     width: 100%;
     height: auto;
+  }
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    width: auto;
+    height: auto;
+  }
+  &__decor--4 {
+    top: 18rem;
+    right: 24rem;
+  }
+
+  &__decor--6 {
+    top: -20rem;
+    right: -26rem;
+  }
+  &__decor--7 {
+    top: 15rem;
+    right: -14rem;
   }
 }
