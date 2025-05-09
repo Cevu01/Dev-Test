@@ -44,11 +44,7 @@
   }
 
   &__role {
-    font-family: $font-text;
-    font-size: 2.8rem;
-    line-height: 3.2rem;
-    letter-spacing: -0.04em;
-    font-weight: 300;
+    @include text-small;
   }
 
   &__footer {

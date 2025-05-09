@@ -25,11 +25,7 @@
   }
 
   &__date {
-    font-size: 2.8rem;
-    color: $text-color;
-    line-height: 3.2rem;
-    letter-spacing: -0.04em;
-    font-family: $font-text;
+    @include text-small;
   }
 
   &__headline {
@@ -42,12 +38,7 @@
   }
 
   &__summary {
-    font-family: $font-text;
-    font-size: 2.8rem;
-    line-height: 3.2rem;
-    font-weight: 300;
-    letter-spacing: -0.04em;
-    color: $text-color;
+    @include text-small;
   }
 
   &__read-more {

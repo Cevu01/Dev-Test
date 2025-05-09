@@ -36,3 +36,7 @@
 .news {
   @include section(30rem);
 }
+
+.footer {
+  @include section(2rem);
+}
