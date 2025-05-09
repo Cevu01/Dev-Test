@@ -2,7 +2,6 @@
   &__container {
     @include container(136rem);
     @include flex(4.9rem);
-    position: relative;
   }
 
   &__title {
@@ -58,10 +57,7 @@
     z-index: 3;
   }
   &__decor {
-    position: absolute;
-    pointer-events: none;
-    width: auto;
-    height: auto;
+    @include decor;
   }
   &__decor--1 {
     top: 5rem;

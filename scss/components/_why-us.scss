@@ -1,6 +1,5 @@
 .why-us {
   &__container {
-    position: relative;
     @include container(136rem);
     @include flex(8.2rem);
   }
@@ -37,10 +36,7 @@
   }
 
   &__decor {
-    position: absolute;
-    pointer-events: none;
-    width: auto;
-    height: auto;
+    @include decor;
   }
   &__decor--9 {
     top: -16rem;

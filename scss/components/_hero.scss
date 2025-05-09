@@ -1,7 +1,6 @@
 .hero {
   &__container {
     @include container(150rem);
-    position: relative;
   }
 
   &__title {
@@ -29,10 +28,7 @@
   }
 
   &__decor {
-    position: absolute;
-    pointer-events: none;
-    width: auto;
-    height: auto;
+    @include decor;
   }
 
   &__decor--1 {

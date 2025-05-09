@@ -1,7 +1,6 @@
 .footer {
   &__container {
     @include container(136rem);
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -56,10 +55,7 @@
   }
 
   &__decor {
-    position: absolute;
-    pointer-events: none;
-    width: auto;
-    height: auto;
+    @include decor;
   }
   &__decor--4 {
     bottom: 22rem;

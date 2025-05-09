@@ -1,7 +1,6 @@
 .showcase {
   &__container {
     @include container(136rem);
-    position: relative;
   }
 
   &__image {
