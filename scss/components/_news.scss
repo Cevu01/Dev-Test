@@ -2,6 +2,7 @@
   &__container {
     @include container(136rem);
     @include flex(5rem);
+    position: relative;
   }
 
   &__title {
@@ -57,5 +58,24 @@
 
   &__cta {
     margin-left: -2.2rem;
+  }
+
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    width: auto;
+    height: auto;
+  }
+  &__decor--4 {
+    top: -6rem;
+    right: 46rem;
+  }
+  &__decor--6 {
+    top: -16rem;
+    left: -26rem;
+  }
+  &__decor--15 {
+    top: -20rem;
+    right: -15rem;
   }
 }
