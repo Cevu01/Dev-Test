@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     gap: 4.1rem;
+    position: relative;
   }
 
   &__image-wrapper {
@@ -53,5 +54,24 @@
   &__text {
     @include textStyles(-0.04em);
     max-width: 78rem;
+  }
+
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    width: auto;
+    height: auto;
+  }
+  &__decor--4 {
+    top: -10rem;
+    right: 62rem;
+  }
+  &__decor--13 {
+    top: 33rem;
+    left: 38rem;
+  }
+  &__decor--14 {
+    bottom: -15rem;
+    right: -15rem;
   }
 }
