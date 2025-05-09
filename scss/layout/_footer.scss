@@ -1,6 +1,7 @@
 .footer {
   &__container {
     @include container(136rem);
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -52,5 +53,24 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    width: auto;
+    height: auto;
+  }
+  &__decor--4 {
+    bottom: 22rem;
+    right: 15rem;
+  }
+  &__decor--12 {
+    top: -28rem;
+    left: -15rem;
+  }
+  &__decor--16 {
+    bottom: -17rem;
+    right: 1rem;
   }
 }
