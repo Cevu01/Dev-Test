@@ -35,4 +35,27 @@
   &__item-text {
     @include textStyles(-0.04em);
   }
+
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    width: auto;
+    height: auto;
+  }
+  &__decor--9 {
+    top: -16rem;
+    right: -12rem;
+  }
+  &__decor--10 {
+    top: 45rem;
+    left: 32rem;
+  }
+  &__decor--11 {
+    top: 33rem;
+    right: -27rem;
+  }
+  &__decor--12 {
+    bottom: -20rem;
+    left: -16rem;
+  }
 }

@@ -1,25 +1,23 @@
 .hero {
-  @include section(0);
+  @include section(50rem);
   min-height: 92vh;
   padding-top: 18rem;
-  padding-bottom: 50rem;
 }
 
 .showcase {
-  @include section;
+  @include section(30rem);
 }
 
 .info {
-  @include section;
+  @include section(30rem);
 }
 
 .why-us {
-  @include section(40rem);
-  position: relative;
+  @include section(30rem);
 }
 
 .founder {
-  @include section(38rem);
+  @include section(30rem);
 }
 
 .contributors {
