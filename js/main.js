@@ -267,6 +267,43 @@ gsap.utils.toArray(".contributors__decor").forEach((icon, i) => {
     delay: Math.random() * 1,
   });
 });
+
 //NETWORK
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".network",
+      start: "top 80%",
+      once: true,
+    },
+  })
+  .from(".network__title", {
+    y: -40,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.out",
+  })
+  .from(
+    ".network__icon",
+    {
+      scale: 0.5,
+      opacity: 0,
+      duration: 0.5,
+      ease: "back.out(1.5)",
+      stagger: 0.1,
+    },
+    "-=0.3"
+  );
+
+gsap.utils.toArray(".network__icon img").forEach((icon, i) => {
+  gsap.to(icon, {
+    y: i % 2 ? "+=10" : "-=10",
+    duration: 3 + Math.random() * 2,
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true,
+    delay: Math.random(),
+  });
+});
 //NEWS
 //FOOTER
