@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // 1) Entrance animation for the text & image when .info scrolls into view
   const infoTl = gsap.timeline({
     scrollTrigger: {
       trigger: ".info",
@@ -103,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       "-=0.4"
     )
-    // drop the single-image tween, and after your paragraphs animate in, do:
     .from(".info__slice--1", {
       x: -200,
       opacity: 0,
@@ -121,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "-=0.4"
     );
 
-  // 2) Continuous, gentle float on the decor svgs
   gsap.utils.toArray(".info__decor").forEach((decor, i) => {
     gsap.to(decor, {
       x: i % 2 === 0 ? "+=20" : "-=20",
@@ -130,11 +127,54 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "sine.inOut",
       repeat: -1,
       yoyo: true,
-      delay: Math.random(), // offset starts
+      delay: Math.random(),
     });
   });
 });
+
 //WHY-US
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".why-us",
+        start: "top 80%",
+        once: true,
+      },
+    })
+    .from(".why-us__title", {
+      y: -40,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.out",
+    })
+    .from(
+      ".why-us__item",
+      {
+        y: 30,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.5,
+        ease: "power3.out",
+      },
+      "-=0.3"
+    );
+
+  gsap.utils.toArray(".why-us__decor").forEach((decor, i) => {
+    gsap.to(decor, {
+      x: i % 2 ? "-=20" : "+=20",
+      y: i % 2 ? "+=10" : "-=10",
+      rotation: i % 2 ? "-=8" : "+=8",
+      duration: 4 + Math.random() * 2,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+      delay: Math.random() * 1.5,
+    });
+  });
+});
 //FOUNDER
 //CONTRIBUOTRS
 //NETWORK
