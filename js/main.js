@@ -214,7 +214,59 @@ gsap.utils.toArray(".founder__decor").forEach((decor, i) => {
     delay: Math.random() * 1,
   });
 });
+
 //CONTRIBUOTRS
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".contributors",
+      start: "top 80%",
+      once: true,
+    },
+  })
+  .from(".contributors__title", {
+    y: -40,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.out",
+  })
+  .from(
+    ".contributors__item",
+    {
+      scale: 0.8,
+      opacity: 0,
+      duration: 0.5,
+      ease: "back.out(1.5)",
+      stagger: {
+        each: 0.15,
+        from: "center",
+      },
+    },
+    "-=0.3"
+  )
+  .from(
+    ".contributors__footer-text",
+    {
+      y: 30,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.out",
+    },
+    "-=0.2"
+  );
+
+gsap.utils.toArray(".contributors__decor").forEach((icon, i) => {
+  gsap.to(icon, {
+    x: i % 2 ? "+=15" : "-=15",
+    y: i % 2 ? "+=10" : "-=10",
+    rotation: i % 2 ? "+=8" : "-=8",
+    ease: "sine.inOut",
+    duration: 4 + Math.random() * 2,
+    repeat: -1,
+    yoyo: true,
+    delay: Math.random() * 1,
+  });
+});
 //NETWORK
 //NEWS
 //FOOTER
