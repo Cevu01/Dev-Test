@@ -1,39 +1,38 @@
 .hero {
-  @include section(50rem);
+  @include section(18rem, 20rem);
   min-height: 92vh;
-  padding-top: 18rem;
 }
 
 .showcase {
-  @include section(30rem);
+  @include section(10rem, 20rem);
 }
 
 .info {
-  @include section(30rem);
+  @include section(10rem, 20rem);
 }
 
 .why-us {
-  @include section(30rem);
+  @include section(10rem, 20rem);
 }
 
 .founder {
-  @include section(30rem);
+  @include section(10rem, 20rem);
 }
 
 .contributors {
-  @include section(30rem);
+  @include section(10rem, 20rem);
 }
 
 .network {
-  @include section(30rem);
+  @include section(10rem, 20rem);
 }
 
 .workflow {
-  @include section(30rem);
+  @include section(10rem, 20rem);
 }
 
 .news {
-  @include section(30rem);
+  @include section(10rem, 20rem);
 }
 
 .footer {

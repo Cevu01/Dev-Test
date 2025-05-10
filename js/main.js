@@ -1,5 +1,6 @@
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
+//VIDEO
 document.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.querySelector(".workflow__video-wrapper");
   if (!wrapper) return;
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//HEADER
 window.addEventListener("scroll", () => {
   const header = document.querySelector(".header");
   if (window.scrollY > 10) {
@@ -31,6 +33,34 @@ window.addEventListener("scroll", () => {
     header.classList.remove("is-scrolled");
   }
 });
+
+const header = document.querySelector(".header");
+
+let lastScrollY = window.scrollY;
+let hideTimeout;
+
+function handleScroll() {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > 10) {
+    header.classList.add("is-scrolled");
+  } else {
+    header.classList.remove("is-scrolled");
+  }
+
+  if (currentScroll < lastScrollY) {
+    header.classList.remove("is-hidden");
+  }
+
+  lastScrollY = currentScroll;
+
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    header.classList.add("is-hidden");
+  }, 2000);
+}
+
+window.addEventListener("scroll", handleScroll);
 
 gsap.utils.toArray(".hero__decor").forEach((decor, i) => {
   gsap.to(decor, {

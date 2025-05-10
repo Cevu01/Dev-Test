@@ -36,10 +36,10 @@
   column-gap: $column-gap;
 }
 
-@mixin section($padding-bottom: 20rem) {
+@mixin section($padding-top: 15rem, $padding-bottom: 15rem) {
   background-color: $bg-color;
   color: $text-color;
-  padding: 0 0 $padding-bottom 0;
+  padding: $padding-top 0 $padding-bottom 0;
 }
 
 @mixin text-small {
