@@ -347,4 +347,31 @@ gsap.utils.toArray(".news__decor").forEach((el, i) => {
     delay: 0.5,
   });
 });
+
 //FOOTER
+gsap.registerPlugin(ScrollTrigger);
+gsap.from(".footer__decor", {
+  scrollTrigger: {
+    trigger: ".footer",
+    start: "top 80%",
+    toggleActions: "play none none none",
+    once: true,
+  },
+  opacity: 0,
+  y: 30,
+  duration: 0.8,
+  ease: "power2.out",
+  stagger: 0.2,
+});
+
+gsap.utils.toArray(".footer__decor").forEach((el, i) => {
+  gsap.to(el, {
+    x: i % 2 ? "+=20" : "-=20",
+    y: i % 2 ? "-=10" : "+=10",
+    duration: 4 + Math.random() * 2,
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true,
+    delay: 1 + i * 0.3,
+  });
+});
