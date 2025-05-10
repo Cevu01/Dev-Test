@@ -19,6 +19,15 @@
     @include flex(3rem);
     @include textStyles(-0.04em);
   }
+  &__visual--split {
+    display: flex;
+  }
+  &__slice {
+    flex: 1;
+    img {
+      display: block;
+    }
+  }
 
   &__diagram {
     display: block;

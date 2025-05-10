@@ -73,6 +73,67 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //INFO
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 1) Entrance animation for the text & image when .info scrolls into view
+  const infoTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".info",
+      start: "top 80%",
+      once: true,
+    },
+  });
+
+  infoTl
+    .from(".info__title", {
+      y: -50,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.out",
+    })
+    .from(
+      ".info__text p",
+      {
+        x: -80,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.6,
+        ease: "power2.out",
+      },
+      "-=0.4"
+    )
+    // drop the single-image tween, and after your paragraphs animate in, do:
+    .from(".info__slice--1", {
+      x: -200,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+    })
+    .from(
+      ".info__slice--2",
+      { x: 200, opacity: 0, duration: 0.6, ease: "power2.out" },
+      "-=0.4"
+    )
+    .from(
+      ".info__slice--3",
+      { y: 200, opacity: 0, duration: 0.6, ease: "power2.out" },
+      "-=0.4"
+    );
+
+  // 2) Continuous, gentle float on the decor svgs
+  gsap.utils.toArray(".info__decor").forEach((decor, i) => {
+    gsap.to(decor, {
+      x: i % 2 === 0 ? "+=20" : "-=20",
+      rotation: i % 2 === 0 ? "+=8" : "-=8",
+      duration: 3 + Math.random() * 2,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+      delay: Math.random(), // offset starts
+    });
+  });
+});
 //WHY-US
 //FOUNDER
 //CONTRIBUOTRS
