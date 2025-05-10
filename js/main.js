@@ -1,4 +1,5 @@
-// js/main.js
+gsap.registerPlugin(SplitText, ScrollTrigger);
+
 document.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.querySelector(".workflow__video-wrapper");
   if (!wrapper) return;
@@ -29,4 +30,48 @@ window.addEventListener("scroll", () => {
   } else {
     header.classList.remove("is-scrolled");
   }
+});
+
+gsap.utils.toArray(".hero__decor").forEach((decor, i) => {
+  gsap.to(decor, {
+    x: i % 2 === 0 ? "+=30" : "-=30",
+    // no vertical movement
+    rotation: i % 2 === 0 ? "+=15" : "-=15",
+    duration: 4 + Math.random() * 1, // shorter & snappier
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true,
+  });
+});
+
+// js/main.js
+document.addEventListener("DOMContentLoaded", () => {
+  // inside your DOMContentLoaded (instead of tl.from(".hero__title", …) )
+  // 1) split the text
+  const split = new SplitText(".hero__title", { type: "chars" });
+  // 2) animate each character up into view
+  const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+  tl.from(split.chars, {
+    y: 20,
+    autoAlpha: 0,
+    stagger: 0.05,
+    duration: 0.6,
+  });
+  // 3) then your subtitle & button as before
+  tl.from(
+    ".hero__subtitle",
+    { y: 40, autoAlpha: 0, duration: 0.8 },
+    "-=0.4"
+  ).from(
+    ".hero__cta",
+    {
+      scale: 0.5,
+      autoAlpha: 0,
+      transformOrigin: "center center",
+      duration: 0.2,
+      ease: "back.out(1.7)",
+      clearProps: "transform",
+    },
+    "-=0.5"
+  );
 });
