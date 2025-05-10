@@ -19,7 +19,7 @@
     background-color: rgba($bg-color, 0.5);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba($color-black, 0.15);
   }
 
   &.is-scrolled {
@@ -27,7 +27,7 @@
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba($color-black, 0.1);
   }
 
   &__container {

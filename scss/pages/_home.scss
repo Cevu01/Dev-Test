@@ -1,40 +1,17 @@
+$sections: showcase, info, why-us, founder, contributors, network, workflow,
+  news;
+
 .hero {
   @include section(18rem, 20rem);
   min-height: 92vh;
 }
 
-.showcase {
-  @include section(10rem, 20rem);
-}
-
-.info {
-  @include section(10rem, 20rem);
-}
-
-.why-us {
-  @include section(10rem, 20rem);
-}
-
-.founder {
-  @include section(10rem, 20rem);
-}
-
-.contributors {
-  @include section(10rem, 20rem);
-}
-
-.network {
-  @include section(10rem, 20rem);
-}
-
-.workflow {
-  @include section(10rem, 20rem);
-}
-
-.news {
-  @include section(10rem, 20rem);
-}
-
 .footer {
   @include section(2rem, 0rem);
+}
+
+@each $section in $sections {
+  .#{$section} {
+    @include section(10rem, 20rem);
+  }
 }
