@@ -297,6 +297,13 @@ gsap.utils.toArray(".contributors__decor").forEach((icon, i) => {
     delay: Math.random() * 1,
   });
 });
+document.querySelector(".contributors__cta").addEventListener("click", () => {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 },
+  });
+});
 
 //NETWORK
 gsap
