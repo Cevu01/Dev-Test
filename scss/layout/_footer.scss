@@ -11,6 +11,9 @@
     align-items: center;
     gap: 15rem;
   }
+  &__logo {
+    cursor: pointer;
+  }
 
   &__nav {
     @include flex(2rem);
