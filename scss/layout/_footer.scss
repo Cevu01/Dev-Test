@@ -21,6 +21,9 @@
 
   &__nav-link {
     @include text-small;
+    &:hover {
+      color: $accent-color;
+    }
   }
 
   .sidebar {

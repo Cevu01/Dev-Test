@@ -94,6 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.querySelector(".hero__cta").addEventListener("click", () => {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 },
+  });
+});
+
 //INFO
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -367,6 +375,13 @@ gsap.utils.toArray(".news__decor").forEach((el, i) => {
     yoyo: true,
     repeat: -1,
     delay: 0.5,
+  });
+});
+document.querySelector(".news__cta").addEventListener("click", () => {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 },
   });
 });
 
