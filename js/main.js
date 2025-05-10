@@ -25,52 +25,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //HEADER
-window.addEventListener("scroll", () => {
-  const header = document.querySelector(".header");
-  if (window.scrollY > 10) {
-    header.classList.add("is-scrolled");
-  } else {
-    header.classList.remove("is-scrolled");
-  }
-});
-
 const header = document.querySelector(".header");
-
+const hero = document.querySelector(".hero");
 let lastScrollY = window.scrollY;
 let hideTimeout;
 
-function handleScroll() {
-  const currentScroll = window.scrollY;
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
 
-  if (currentScroll > 10) {
-    header.classList.add("is-scrolled");
-  } else {
-    header.classList.remove("is-scrolled");
-  }
+  header.classList.toggle("is-scrolled", scrollY > 10);
 
-  if (currentScroll < lastScrollY) {
+  const heroRect = hero.getBoundingClientRect();
+  const inHero = heroRect.bottom > header.offsetHeight;
+
+  if (inHero) {
     header.classList.remove("is-hidden");
+    clearTimeout(hideTimeout);
+  } else {
+    if (scrollY > lastScrollY) {
+      clearTimeout(hideTimeout);
+      hideTimeout = setTimeout(() => {
+        header.classList.add("is-hidden");
+      }, 1000);
+    } else {
+      header.classList.remove("is-hidden");
+    }
   }
 
-  lastScrollY = currentScroll;
-
-  clearTimeout(hideTimeout);
-  hideTimeout = setTimeout(() => {
-    header.classList.add("is-hidden");
-  }, 2000);
-}
-
-window.addEventListener("scroll", handleScroll);
-
-gsap.utils.toArray(".hero__decor").forEach((decor, i) => {
-  gsap.to(decor, {
-    x: i % 2 === 0 ? "+=30" : "-=30",
-    rotation: i % 2 === 0 ? "+=15" : "-=15",
-    duration: 4 + Math.random() * 1,
-    ease: "sine.inOut",
-    repeat: -1,
-    yoyo: true,
-  });
+  lastScrollY = scrollY;
 });
 
 //HERO
@@ -100,6 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     "-=0.5"
   );
+  gsap.utils.toArray(".hero__decor").forEach((decor, i) => {
+    gsap.to(decor, {
+      x: i % 2 === 0 ? "+=30" : "-=30",
+      rotation: i % 2 === 0 ? "+=15" : "-=15",
+      duration: 4 + Math.random() * 1,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+  });
 });
 
 //INFO

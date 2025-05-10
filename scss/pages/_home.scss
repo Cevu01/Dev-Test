@@ -36,5 +36,5 @@
 }
 
 .footer {
-  @include section(2rem);
+  @include section(2rem, 0rem);
 }
