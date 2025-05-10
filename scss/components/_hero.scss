@@ -17,7 +17,6 @@
   &__group {
     position: absolute;
     top: 30rem;
-    max-width: 68rem;
     right: -8rem;
     @include flex(2.9rem);
 
@@ -42,8 +41,8 @@
   }
 
   &__decor--3 {
-    top: 43rem;
-    left: 111.5rem;
+    top: 40rem;
+    left: 100rem;
   }
 
   &__decor--4 {
@@ -54,5 +53,237 @@
   &__decor--5 {
     top: 58rem;
     left: -20rem;
+  }
+  @media (max-width: 1800px) {
+    &__container {
+      @include container(136rem);
+      padding-bottom: 24rem;
+    }
+    &__group {
+      right: auto;
+      left: 70rem;
+      top: 26rem;
+      .hero__subtitle {
+        @include textStyles(-0.04em, 2.8rem);
+      }
+    }
+
+    &__title {
+      font-family: $font-heading;
+      font-size: 10rem;
+      line-height: 11.6rem;
+      font-weight: 300;
+    }
+
+    &__decor--1 {
+      top: -14rem;
+      left: 70rem;
+    }
+
+    &__decor--2 {
+      top: 34rem;
+      left: 42rem;
+    }
+
+    &__decor--3 {
+      top: 40rem;
+      left: 90rem;
+    }
+
+    &__decor--4 {
+      top: 56rem;
+      left: 53rem;
+    }
+    &__decor--5 {
+      top: 54rem;
+      left: -15rem;
+    }
+  }
+  @media (max-width: 1500px) {
+    &__container {
+      @include container(120rem);
+    }
+    &__group {
+      right: auto;
+      left: 68rem;
+      top: 24rem;
+      .hero__subtitle {
+        @include textStyles(-0.04em, 2.6rem);
+      }
+    }
+
+    &__title {
+      font-family: $font-heading;
+      font-size: 8rem;
+      line-height: 11rem;
+      font-weight: 300;
+    }
+
+    &__decor--1 {
+      top: -12rem;
+      left: 50rem;
+    }
+
+    &__decor--2 {
+      top: 32rem;
+      left: 30rem;
+    }
+
+    &__decor--3 {
+      top: 38rem;
+      left: 88rem;
+    }
+
+    &__decor--4 {
+      top: 56rem;
+      left: 53rem;
+    }
+    &__decor--5 {
+      top: 54rem;
+      left: -12rem;
+    }
+  }
+  @media (max-width: 1330px) {
+    &__container {
+      @include container(106rem);
+    }
+    &__group {
+      right: auto;
+      left: 62rem;
+      top: 22rem;
+      .hero__subtitle {
+        @include textStyles(-0.04em, 2.6rem);
+      }
+    }
+
+    &__title {
+      font-family: $font-heading;
+      font-size: 7rem;
+      line-height: 10rem;
+      font-weight: 300;
+    }
+
+    &__decor--1 {
+      top: -11.5rem;
+      left: 50rem;
+    }
+
+    &__decor--2 {
+      top: 32rem;
+      left: 30rem;
+    }
+
+    &__decor--3 {
+      top: 38rem;
+      left: 80rem;
+    }
+
+    &__decor--4 {
+      top: 50rem;
+      left: 53rem;
+    }
+    &__decor--5 {
+      top: 50rem;
+      left: -12rem;
+    }
+  }
+  @media (max-width: 1135px) {
+    &__container {
+      @include container(88rem);
+    }
+    &__group {
+      right: auto;
+      left: 52rem;
+      top: 22rem;
+      padding-right: 3rem;
+      .hero__subtitle {
+        @include textStyles(-0.03em, 2.4rem);
+      }
+    }
+
+    &__title {
+      font-family: $font-heading;
+      font-size: 6.5rem;
+      line-height: 8rem;
+      font-weight: 300;
+      padding: 3rem;
+    }
+
+    &__decor--1 {
+      top: -9.5rem;
+      left: 44rem;
+    }
+
+    &__decor--2 {
+      top: 30rem;
+      left: 24rem;
+    }
+
+    &__decor--3 {
+      top: 36rem;
+      left: 72rem;
+    }
+
+    &__decor--4 {
+      top: 46rem;
+      left: 50rem;
+    }
+    &__decor--5 {
+      top: 46rem;
+      left: -10rem;
+    }
+  }
+
+  @media (max-width: 430px) {
+    &__container {
+      @include container(60rem);
+    }
+    &__group {
+      right: auto;
+      left: 50%;
+      top: 80%;
+      transform: translate(-50%);
+      padding-right: 3rem;
+      .hero__subtitle {
+        @include textStyles(-0.03em, 2.4rem);
+      }
+    }
+
+    &__title {
+      font-family: $font-heading;
+      font-size: 4rem;
+      line-height: 6rem;
+      font-weight: 300;
+      padding: 3rem;
+    }
+
+    &__decor--1 {
+      top: -9.5rem;
+      left: 20rem;
+      width: 4rem;
+    }
+
+    &__decor--2 {
+      top: 54rem;
+      left: 10rem;
+      width: 8rem;
+    }
+
+    &__decor--3 {
+      top: 50rem;
+      left: 30rem;
+      width: 6rem;
+    }
+
+    &__decor--4 {
+      top: 70rem;
+      left: 32rem;
+      width: 4rem;
+    }
+    &__decor--5 {
+      top: 60rem;
+      left: -5rem;
+      width: 6rem;
+    }
   }
 }

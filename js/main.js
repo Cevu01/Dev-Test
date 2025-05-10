@@ -27,33 +27,39 @@ document.addEventListener("DOMContentLoaded", () => {
 //HEADER
 const header = document.querySelector(".header");
 const hero = document.querySelector(".hero");
+const toggle = document.querySelector(".header__toggle");
 let lastScrollY = window.scrollY;
 let hideTimeout;
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
-
   header.classList.toggle("is-scrolled", scrollY > 10);
 
-  const heroRect = hero.getBoundingClientRect();
-  const inHero = heroRect.bottom > header.offsetHeight;
-
+  const inHero = hero.getBoundingClientRect().bottom > header.offsetHeight;
   if (inHero) {
     header.classList.remove("is-hidden");
     clearTimeout(hideTimeout);
   } else {
     if (scrollY > lastScrollY) {
       clearTimeout(hideTimeout);
-      hideTimeout = setTimeout(() => {
-        header.classList.add("is-hidden");
-      }, 1000);
+      hideTimeout = setTimeout(() => header.classList.add("is-hidden"), 1000);
     } else {
       header.classList.remove("is-hidden");
     }
   }
-
   lastScrollY = scrollY;
 });
+
+toggle.addEventListener("click", () => {
+  header.classList.toggle("is-open");
+});
+
+const links = document.querySelectorAll(".header__nav-link");
+links.forEach((link) =>
+  link.addEventListener("click", () => {
+    header.classList.remove("is-open");
+  })
+);
 
 //HERO
 document.addEventListener("DOMContentLoaded", () => {

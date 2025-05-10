@@ -4,6 +4,21 @@ $sections: showcase, info, why-us, founder, contributors, network, workflow,
 .hero {
   @include section(18rem, 20rem);
   min-height: 92vh;
+  @media (max-width: 1600px) {
+    @include section(16rem, 20rem);
+  }
+  @media (max-width: 1500px) {
+    @include section(14rem, 20rem);
+  }
+  @media (max-width: 1330px) {
+    @include section(12rem, 20rem);
+  }
+  @media (max-width: 1135px) {
+    @include section(10rem, 20rem);
+  }
+  @media (max-width: 430px) {
+    @include section(10rem, 0rem);
+  }
 }
 
 .footer {
