@@ -175,7 +175,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 //FOUNDER
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".founder",
+      start: "top 80%",
+      once: true,
+    },
+  })
+  .from(".founder__image-wrapper", {
+    x: -100,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power3.out",
+  })
+  .from(
+    ".founder__content",
+    {
+      y: 50,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.out",
+    },
+    "-=0.4"
+  );
+
+gsap.utils.toArray(".founder__decor").forEach((decor, i) => {
+  gsap.to(decor, {
+    x: i % 2 ? "-=25" : "+=25",
+    y: i % 2 ? "+=15" : "-=15",
+    rotation: i % 2 ? "-=10" : "+=10",
+    duration: 5 + Math.random() * 2,
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true,
+    delay: Math.random() * 1,
+  });
+});
 //CONTRIBUOTRS
 //NETWORK
 //NEWS
